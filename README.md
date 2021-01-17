@@ -44,5 +44,6 @@ The following example shows the optimal path to visit several tourist attraction
 
 ![Locations1](https://github.com/DavidLoi/Path-Planner/blob/main/Screenshots/Sample1.PNG)
 ![Locations2](https://github.com/DavidLoi/Path-Planner/blob/main/Screenshots/Sample2.PNG)
+
 ![Route1](https://github.com/DavidLoi/Path-Planner/blob/main/Screenshots/Route1.PNG)
 ![Route2](https://github.com/DavidLoi/Path-Planner/blob/main/Screenshots/Route2.PNG)
