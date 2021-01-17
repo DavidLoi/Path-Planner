@@ -1,5 +1,5 @@
 # Path-Planner
-This app uses the google distance matrix api to find the most optimal path between a starting location, any additional locations inbetween and an ending location. A feature to save locations will be added in soon to allow users to save locations they frequent often to make the app more convenient as a whole.
+This app uses the google distance matrix api to find the most optimal path between a starting location, any additional locations inbetween and an ending location. A feature to save locations will be added in soon to allow users to save locations they frequent often to make the app more convenient as a whole, as of now clicking the star at the Plan screen will add the location to the Saved screen but it can't be used for anything.
 
 # Motivation
 I created this app because going on drives around town with my friends made me think about how much time we spent picking up and dropping everyone off. Especially since my friends and I are quite spread out, I always wondered what would be the fastest route for us to take to save on time and gas money.
