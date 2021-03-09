@@ -22,26 +22,22 @@ locations = []
 # API key
 api_key = "AIzaSyBPxKHzJxJ64K1p11DyoHHP8EGDZtON4yg"
 
-
 # Navigation toolbar
 class ContentNavigationDrawer(BoxLayout):
     screen_manager = ObjectProperty()
     nav_drawer = ObjectProperty()
 
-
 # Home screen
 class HomeScreen(Screen):
     pass
 
-
 count = 0
-
 
 # Plan screen
 class PlanScreen(Screen):
     plan = ObjectProperty()
 
-    # Function to add location from plan screen to locations screen
+    # Adds location from plan screen to locations screen
     def add_location(self):
         location = self.ids.address.text
         if location != "":
@@ -57,7 +53,7 @@ class PlanScreen(Screen):
             locations.append(location)
             self.ids.address.text = ""
 
-    # Function to add location from plan screen to saved screen
+    # Adds location from plan screen to saved screen
     def favourite_location(self):
         location = self.ids.address.text
         MDApp.get_running_app().root.ids.screen_manager.get_screen(
@@ -68,7 +64,7 @@ class PlanScreen(Screen):
 class LocationScreen(Screen):
     location = ObjectProperty()
 
-    # Function to calculate shortest distance path
+    # Calculates shortest distance path
     def path(self):
         if len(locations) >= 2:
             start = locations[0]
@@ -117,23 +113,25 @@ class LocationScreen(Screen):
                         route = i
                         best = time
 
-                print(best)
-
+                #print(best)
+                
+                # Gets number of hours
                 hours = math.floor(best / 3600)
-                print(hours)
                 best -= hours * 3600
-                print(best)
+                #print(hours)
+                #print(best)
 
+                # Gets number of minutes
                 minutes = math.floor(best / 60)
                 best -= minutes * 60
-                print(best)
+                #print(minutes)
+                #print(best)
 
+                # Gets number of seconds
                 seconds = best
-                print(seconds)
-
+                #print(seconds)
+                
                 # Returns ideal route and total travel time
-                print(route, best)
-
                 MDApp.get_running_app().root.ids.screen_manager.get_screen(
                     "route"
                 ).ids.routeList.add_widget(OneLineListItem(text=locations[0]))
@@ -152,6 +150,7 @@ class LocationScreen(Screen):
 
                 self.manager.current = "route"
 
+    # Clears locations list
     def clear(self):
         global locations
         locations = []
